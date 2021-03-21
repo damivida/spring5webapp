@@ -27,8 +27,6 @@ public class BootstrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-
-
         //publisher
         Publisher blackForest = new Publisher();
         blackForest.setAddressLine("Opatijska");
@@ -39,14 +37,14 @@ public class BootstrapData implements CommandLineRunner {
 
         Publisher oldChild = new Publisher();
         oldChild.setAddressLine("Umaška");
-        blackForest.setName("Old Child");
+        oldChild.setName("Old Child");
         oldChild.setCity("Osijek");
         oldChild.setState("RH");
         oldChild.setZip(31000);
 
 
         //book raven, author Edgar
-        Author edgar = new Author("Edgar","Allan-Po");
+        Author edgar = new Author("Edgar","Allan-Poe");
         Book raven = new Book("Raven", "123456");
         edgar.getBooks().add(raven);
         raven.getAuthors().add(edgar);
@@ -60,7 +58,7 @@ public class BootstrapData implements CommandLineRunner {
         publisherRepository.save(blackForest);
 
         //book necronomicon, author hp
-        Author hp = new Author("Hp", "Lowecraft");
+        Author hp = new Author("Hp", "Lovecraft");
         Book necronomicon = new Book("Necronomicoin", "456789");
         hp.getBooks().add(necronomicon);
         necronomicon.getAuthors().add(hp);
