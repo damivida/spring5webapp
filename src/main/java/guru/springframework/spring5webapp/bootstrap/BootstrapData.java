@@ -59,7 +59,7 @@ public class BootstrapData implements CommandLineRunner {
 
         //book necronomicon, author hp
         Author hp = new Author("Hp", "Lovecraft");
-        Book necronomicon = new Book("Necronomicoin", "456789");
+        Book necronomicon = new Book("Necronomicon", "456789");
         hp.getBooks().add(necronomicon);
         necronomicon.getAuthors().add(hp);
         necronomicon.setPublisher(oldChild);
